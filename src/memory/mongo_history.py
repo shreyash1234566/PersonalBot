@@ -29,7 +29,17 @@ class MongoHistory:
     @property
     def client(self) -> MongoClient:
         if self._client is None:
-            self._client = MongoClient(self._uri)
+            try:
+                self._client = MongoClient(self._uri, serverSelectionTimeoutMS=5000)
+                # attempt to connect and surface any connection errors early
+                try:
+                    info = self._client.server_info()
+                    print(f"[mongo_history] connected to MongoDB server version={info.get('version')}")
+                except Exception as conn_err:
+                    print(f"[mongo_history] warning: could not retrieve server_info: {conn_err}")
+            except Exception as e:
+                print(f"[mongo_history] ERROR creating MongoClient: {e}")
+                raise
         return self._client
 
     @property
@@ -94,11 +104,27 @@ class MongoHistory:
             "timestamp": ts,
             "metadata": metadata or {},
         }
-        self.db["messages"].insert_one(msg)
-        self.db["conversations"].update_one(
-            {"conversation_id": conversation_id},
-            {"$set": {"last_active": ts}, "$inc": {"message_count": 1}},
-        )
+        try:
+            res = self.db["messages"].insert_one(msg)
+            print(f"[mongo_history] insert_one ok id={res.inserted_id}")
+        except Exception as e:
+            print(f"[mongo_history] ERROR inserting message for {conversation_id}: {e}")
+            import traceback
+
+            traceback.print_exc()
+            # do not re-raise so the bot can still reply; caller can inspect logs
+            return
+
+        try:
+            self.db["conversations"].update_one(
+                {"conversation_id": conversation_id},
+                {"$set": {"last_active": ts}, "$inc": {"message_count": 1}},
+            )
+        except Exception as e:
+            print(f"[mongo_history] ERROR updating conversation metadata for {conversation_id}: {e}")
+            import traceback
+
+            traceback.print_exc()
 
     def get_recent_messages(
         self, conversation_id: str, limit: int = None
