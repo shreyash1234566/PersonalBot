@@ -9,6 +9,7 @@ Supports both interactive CLI mode and programmatic API.
 """
 
 import asyncio
+import traceback  # <--- ADDED for detailed error logging
 from datetime import datetime
 from pathlib import Path
 
@@ -19,6 +20,7 @@ from src.integrations.sheets_logger import SheetsLogger
 from src.llm.fallback import LLMFallbackChain
 from src.engine.context_builder import ContextBuilder
 from src.engine.post_processor import PostProcessor
+from typing import Optional
 
 
 class Chatbot:
@@ -45,82 +47,104 @@ class Chatbot:
         """Set the active conversation context."""
         self._conversation_id = conversation_id
         self._partner_name = partner_name
-        self.history.get_or_create_conversation(conversation_id, partner_name)
+        
+        # LOGGING ADDED: Check if DB connection works during setup
+        print(f"[Chatbot] Setting conversation to: {conversation_id} ({partner_name})")
+        try:
+            self.history.get_or_create_conversation(conversation_id, partner_name)
+        except Exception as e:
+            print(f"[Chatbot] ❌ CRITICAL: Failed to init conversation in DB: {e}")
+            traceback.print_exc()
 
     def status(self) -> dict:
         """Get chatbot system status."""
+        stats = {}
+        try:
+            stats = self.history.get_stats(self._conversation_id)
+        except Exception as e:
+            stats = {"error": str(e)}
+
         return {
             "llm_providers": self.llm.status(),
             "available_providers": self.llm.available_providers,
             "vector_store": self.vector_store.info(),
             "conversation_id": self._conversation_id,
             "partner_name": self._partner_name,
-            "history_stats": self.history.get_stats(self._conversation_id),
+            "history_stats": stats,
         }
 
     # ── Core Response Generation ──────────────────────────────────────────
 
+    
+
     async def respond(
         self,
         girl_message: str,
-        conversation_id: str = None,
-        partner_name: str = None,
+        conversation_id: Optional[str] = None,
+        partner_name: Optional[str] = None,
     ) -> list[str]:
         """
         Generate Shreyash's response to a girl's message.
-
-        Full pipeline:
-          1. Store girl's message in history
-          2. Retrieve similar examples from ChromaDB
-          3. Build context-aware prompt
-          4. Generate via LLM (with fallback)
-          5. Post-process for style enforcement
-          6. Store response in history
-          7. Return list of messages (burst)
-
-        Args:
-            girl_message: The girl's latest message
-            conversation_id: Optional override for conversation ID
-            partner_name: Optional override for partner name
-
-        Returns:
-            List of strings (Shreyash's burst messages)
         """
         conv_id = conversation_id or self._conversation_id
         partner = partner_name or self._partner_name
 
-        # Ensure conversation exists
-        self.history.get_or_create_conversation(conv_id, partner)
+        print(f"[Chatbot] Processing message from {conv_id}: '{girl_message[:20]}...'")
 
-        # 1. Store girl's message
-        self.history.add_message(
-            conversation_id=conv_id,
-            role="user",
-            content=girl_message,
-        )
-        self.sheets_logger.append_message(
-            conversation_id=conv_id,
-            partner_name=partner,
-            role="user",
-            content=girl_message,
-        )
+        # 0. Ensure conversation exists
+        try:
+            self.history.get_or_create_conversation(conv_id, partner)
+        except Exception as e:
+            print(f"[Chatbot] ❌ ERROR: Could not create/get conversation: {e}")
+
+        # 1. Store girl's message (CRITICAL WRITE 1)
+        print("[Chatbot] Saving USER message to history...")
+        try:
+            self.history.add_message(
+                conversation_id=conv_id,
+                role="user",
+                content=girl_message,
+            )
+            print("[Chatbot] ✅ USER message saved.")
+        except Exception as e:
+            print(f"[Chatbot] ❌ FAILED to save USER message to DB: {e}")
+            traceback.print_exc()
+
+        # 1.5 Optional Sheet Logging
+        if self.sheets_logger.enabled:
+            try:
+                self.sheets_logger.append_message(
+                    conversation_id=conv_id,
+                    partner_name=partner,
+                    role="user",
+                    content=girl_message,
+                )
+            except Exception as e:
+                print(f"[Chatbot] Sheet logging failed: {e}")
 
         # 2. Retrieve similar examples
         retrieved = []
-        if self.vector_store.count() > 0:
-            retrieved = self.vector_store.retrieve(
-                query=girl_message,
-                top_k=RETRIEVAL_TOP_K,
-            )
+        try:
+            if self.vector_store.count() > 0:
+                retrieved = self.vector_store.retrieve(
+                    query=girl_message,
+                    top_k=RETRIEVAL_TOP_K,
+                )
+        except Exception as e:
+            print(f"[Chatbot] Vector retrieval failed (non-fatal): {e}")
 
         # 3. Get conversation history
-        history_turns = self.history.get_recent_as_chatml(
-            conversation_id=conv_id,
-            limit=HISTORY_WINDOW,
-        )
-        # Remove the last turn (it's the girl_message we just added)
-        if history_turns and history_turns[-1]["content"] == girl_message:
-            history_turns = history_turns[:-1]
+        history_turns = []
+        try:
+            history_turns = self.history.get_recent_as_chatml(
+                conversation_id=conv_id,
+                limit=HISTORY_WINDOW,
+            )
+            # Remove the last turn (it's the girl_message we just added)
+            if history_turns and history_turns[-1]["content"] == girl_message:
+                history_turns = history_turns[:-1]
+        except Exception as e:
+             print(f"[Chatbot] ❌ Failed to fetch history context: {e}")
 
         # 4. Build prompt
         messages = self.context_builder.build_messages(
@@ -131,38 +155,51 @@ class Chatbot:
         )
 
         # 5. Generate via LLM
+        print("[Chatbot] Generating response via LLM...")
         raw_output = await self.llm.generate(messages)
 
         # 6. Post-process (pass girl_message for hmm↔mm mirroring)
         processed = self.post_processor.process(raw_output, girl_message)
 
-        # 7. Store response in history
+        # 7. Store response in history (CRITICAL WRITE 2)
         full_response = " [MSG_BREAK] ".join(processed)
-        self.history.add_message(
-            conversation_id=conv_id,
-            role="assistant",
-            content=full_response,
-            metadata={
-                "provider": self.llm.last_used,
-                "raw_output": raw_output[:500],
-                "retrieved_count": len(retrieved),
-            },
-        )
-        self.sheets_logger.append_message(
-            conversation_id=conv_id,
-            partner_name=partner,
-            role="assistant",
-            content=full_response,
-            provider=self.llm.last_used or "",
-        )
+        
+        print(f"[Chatbot] Saving BOT response: '{full_response[:20]}...'")
+        try:
+            self.history.add_message(
+                conversation_id=conv_id,
+                role="assistant",
+                content=full_response,
+                metadata={
+                    "provider": self.llm.last_used,
+                    "raw_output": raw_output[:500],
+                    "retrieved_count": len(retrieved),
+                },
+            )
+            print("[Chatbot] ✅ BOT response saved.")
+        except Exception as e:
+            print(f"[Chatbot] ❌ FAILED to save BOT message to DB: {e}")
+            traceback.print_exc()
+
+        if self.sheets_logger.enabled:
+            try:
+                self.sheets_logger.append_message(
+                    conversation_id=conv_id,
+                    partner_name=partner,
+                    role="assistant",
+                    content=full_response,
+                    provider=self.llm.last_used or "",
+                )
+            except Exception as e:
+                print(f"[Chatbot] Sheet logging failed: {e}")
 
         return processed
 
     def respond_sync(
         self,
         girl_message: str,
-        conversation_id: str = None,
-        partner_name: str = None,
+        conversation_id: Optional[str] = None,
+        partner_name: Optional[str] = None,
     ) -> list[str]:
         """Synchronous wrapper around respond()."""
         try:
