@@ -1,16 +1,5 @@
 {
   "self": {
-  ,
-  "Rudra Jecrc": {
-    "aliases": ["rudra", "rudra jecrc", "rudra kumar"],
-    "age": 21,
-    "relationship": "test user (your phone)",
-    "current": "JECRC University Jaipur",
-    "personality": ["tech enthusiast", "loves testing bots"],
-    "interests": ["coding", "AI", "chatbots"],
-    "birthday": "1 January",
-    "tone_preference": ["treat as a friend", "be helpful and responsive"]
-  }
     "name": "Shreyash",
     "age": 21,
     "study": "BTech CS at JECRC University Jaipur",
@@ -59,6 +48,16 @@
         "do not cross boundaries",
         "keep playful interest"
       ]
+    },
+    "Rudra Jecrc": {
+      "aliases": ["rudra", "rudra jecrc", "rudra kumar"],
+      "age": 21,
+      "relationship": "test user (your phone)",
+      "current": "JECRC University Jaipur",
+      "personality": ["tech enthusiast", "loves testing bots"],
+      "interests": ["coding", "AI", "chatbots"],
+      "birthday": "1 January",
+      "tone_preference": ["treat as a friend", "be helpful and responsive"]
     }
   }
 }
