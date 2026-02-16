@@ -1,0 +1,2541 @@
+{
+  "_meta": {
+    "generated_from": "E:\\VS code\\personal-chatbot\\data\\parsed\\parsed_messages.jsonl",
+    "total_messages_analyzed": 17902,
+    "user_identity": "I Am All",
+    "real_name": "Shreyash"
+  },
+  "word_frequencies": {
+    "h": 4910,
+    "to": 2713,
+    "nahi": 2120,
+    "me": 1761,
+    "tha": 1368,
+    "bhi": 1295,
+    "kar": 1184,
+    "se": 1141,
+    "hi": 1052,
+    "ke": 1038,
+    "hu": 1021,
+    "kya": 967,
+    "Ha": 836,
+    "ki": 745,
+    "ho": 674,
+    "ye": 672,
+    "Hmm": 640,
+    "Good": 614,
+    "ka": 589,
+    "tu": 566,
+    "raha": 520,
+    "Ye": 500,
+    "bat": 492,
+    "Ook": 489,
+    "ko": 464,
+    "rahi": 412,
+    "rah": 398,
+    "To": 397,
+    "vo": 396,
+    "phir": 387,
+    "liye": 384,
+    "na": 381,
+    "pe": 380,
+    "thi": 373,
+    "gaya": 367,
+    "Tu": 361,
+    "message": 347,
+    "Or": 345,
+    "kam": 336,
+    "or": 327,
+    "Me": 320,
+    "de": 312,
+    "Ab": 309,
+    "pata": 301,
+    "Kya": 294,
+    "bata": 292,
+    "gayi": 291,
+    "abhi": 290,
+    "mere": 279,
+    "ab": 276,
+    "Abhi": 270,
+    "Nahi": 267,
+    "le": 266,
+    "Aacha": 266,
+    "ja": 263,
+    "ek": 262,
+    "was": 260,
+    "This": 259,
+    "edited": 258,
+    "Phir": 256,
+    "tere": 255,
+    "the": 250,
+    "morning": 245,
+    "kuch": 244,
+    "hota": 243,
+    "koi": 242,
+    "mujhe": 240,
+    "bar": 237,
+    "hoga": 236,
+    "diya": 231,
+    "sakta": 230,
+    "hua": 226,
+    "kyuch": 226,
+    "aa": 225,
+    "jada": 218,
+    "par": 215,
+    "karna": 211,
+    "tak": 204,
+    "kyu": 203,
+    "hai": 198,
+    "is": 198,
+    "kiya": 194,
+    "dekha": 194,
+    "thik": 191,
+    "padega": 190,
+    "night": 190,
+    "yahi": 186,
+    "aacha": 184,
+    "kon": 183,
+    "karta": 181,
+    "man": 181,
+    "jo": 177,
+    "sath": 170,
+    "so": 168,
+    "kaha": 168,
+    "Vo": 163,
+    "karne": 162,
+    "Kyu": 161,
+    "bad": 161,
+    "Tere": 157,
+    "jana": 156,
+    "chahiye": 155,
+    "kese": 155,
+    "bahut": 153,
+    "time": 153,
+    "bol": 148,
+    "din": 145,
+    "esa": 143,
+    "yad": 142,
+    "ya": 142,
+    "Koi": 142,
+    "sahi": 138,
+    "jata": 137,
+    "Aaj": 137,
+    "wale": 136,
+    "bas": 136,
+    "Ek": 134,
+    "mene": 133,
+    "nahin": 132,
+    "Aur": 131,
+    "kabhi": 128,
+    "aur": 126,
+    "ghar": 123,
+    "sab": 120,
+    "aaj": 120,
+    "ese": 119,
+    "wala": 119,
+    "laga": 116,
+    "tujhe": 112,
+    "tune": 111,
+    "aap": 110,
+    "Mere": 109,
+    "kab": 109,
+    "Ese": 109,
+    "bhej": 109,
+    "liya": 109,
+    "mein": 109,
+    "wali": 109,
+    "sakte": 108,
+    "deta": 108,
+    "lag": 108,
+    "ha": 107,
+    "aaya": 107,
+    "keha": 107,
+    "sakti": 104,
+    "behan": 103,
+    "jab": 102,
+    "baje": 102,
+    "chod": 102,
+    "use": 101,
+    "mera": 99,
+    "clg": 99,
+    "log": 96,
+    "Kkrh": 95,
+    "kafi": 94,
+    "a": 94,
+    "phele": 94,
+    "Kon": 93,
+    "tab": 92,
+    "utha": 91,
+    "karunga": 91,
+    "meri": 91,
+    "Ghar": 90,
+    "aata": 90,
+    "Par": 89,
+    "rahe": 89,
+    "hoti": 89,
+    "aachi": 89,
+    "Sahi": 88,
+    "sa": 87,
+    "karte": 87,
+    "karegi": 87,
+    "Jo": 87,
+    "leta": 85,
+    "Teri": 85,
+    "Hmmm": 85,
+    "Tune": 85,
+    "Hai": 85,
+    "dena": 84,
+    "teri": 82,
+    "gaye": 82,
+    "bola": 82,
+    "ji": 82,
+    "jaldi": 81,
+    "pas": 81,
+    "chal": 80,
+    "kisi": 80,
+    "chala": 79,
+    "I": 79,
+    "Na": 79,
+    "mil": 78,
+    "call": 78,
+    "khud": 78,
+    "Mera": 76,
+    "lagta": 75,
+    "do": 75,
+    "Yahi": 75,
+    "plan": 74,
+    "hogi": 74,
+    "jayega": 74,
+    "Esa": 73,
+    "Le": 73,
+    "lagata": 72,
+    "you": 72,
+    "Agar": 72,
+    "dost": 71,
+    "usake": 70,
+    "Mujhe": 70,
+    "pass": 70,
+    "ne": 70,
+    "Ho": 70,
+    "shayad": 69,
+    "pehale": 69,
+    "logo": 68,
+    "karti": 68,
+    "agar": 68,
+    "Kiya": 67,
+    "yaha": 66,
+    "likha": 66,
+    "Ki": 65,
+    "soch": 64,
+    "Call": 63,
+    "So": 63,
+    "Itana": 63,
+    "Ya": 62,
+    "Lagata": 62,
+    "tera": 61,
+    "maja": 61,
+    "Is": 61,
+    "rakha": 60,
+    "photo": 60,
+    "leti": 60,
+    "nam": 60,
+    "sakata": 60,
+    "phone": 59,
+    "of": 59,
+    "Bahut": 59,
+    "Oook": 58,
+    "lena": 58,
+    "dunga": 58,
+    "Pata": 58,
+    "mat": 58,
+    "wahi": 57,
+    "in": 57,
+    "us": 57,
+    "si": 57,
+    "hue": 57,
+    "kal": 56,
+    "karan": 56,
+    "mar": 56,
+    "good": 55,
+    "Kafi": 55,
+    "Chal": 55,
+    "isake": 55,
+    "betha": 55,
+    "chiz": 55,
+    "alag": 55,
+    "Mene": 54,
+    "bana": 54,
+    "batana": 54,
+    "mana": 54,
+    "and": 54,
+    "samjha": 54,
+    "bich": 54,
+    "Raha": 54,
+    "Clg": 53,
+    "Lagta": 53,
+    "Tera": 52,
+    "hun": 52,
+    "delete": 52,
+    "Jab": 52,
+    "apane": 51,
+    "hote": 51,
+    "Kaha": 51,
+    "puch": 51,
+    "sare": 51,
+    "nikal": 50,
+    "Kal": 50,
+    "no": 50,
+    "waha": 50,
+    "for": 50,
+    "rehata": 50,
+    "Kuch": 50,
+    "Ok": 49,
+    "har": 49,
+    "jati": 49,
+    "jaunga": 49,
+    "karu": 49,
+    "it": 49,
+    "sal": 49,
+    "thodi": 48,
+    "Tujhe": 48,
+    "itana": 47,
+    "kha": 47,
+    "band": 46,
+    "jindagi": 46,
+    "Meri": 46,
+    "Thanks": 46,
+    "lunga": 45,
+    "dikha": 45
+  },
+  "spelling_map": {
+    "h": {
+      "standard_form": "hai",
+      "ayush_count": 4910,
+      "confirmed": true
+    },
+    "nhi": {
+      "standard_form": "nahi",
+      "ayush_count": 11,
+      "confirmed": true
+    },
+    "Or": {
+      "standard_form": "aur",
+      "ayush_count": 345,
+      "confirmed": true
+    },
+    "Ha": {
+      "standard_form": "haan",
+      "ayush_count": 836,
+      "confirmed": true
+    },
+    "aacha": {
+      "standard_form": "accha",
+      "ayush_count": 184,
+      "confirmed": true
+    },
+    "phele": {
+      "standard_form": "pehle",
+      "ayush_count": 94,
+      "confirmed": true
+    },
+    "kyuch": {
+      "standard_form": "kuch",
+      "ayush_count": 226,
+      "confirmed": true
+    },
+    "thik": {
+      "standard_form": "theek",
+      "ayush_count": 191,
+      "confirmed": true
+    },
+    "to": {
+      "standard_form": "toh",
+      "ayush_count": 2713,
+      "confirmed": true
+    },
+    "kesi": {
+      "standard_form": "kaisi",
+      "ayush_count": 24,
+      "confirmed": true
+    },
+    "kro": {
+      "standard_form": "karo",
+      "ayush_count": 1,
+      "confirmed": true
+    },
+    "krta": {
+      "standard_form": "karta",
+      "ayush_count": 2,
+      "confirmed": true
+    },
+    "krne": {
+      "standard_form": "karne",
+      "ayush_count": 2,
+      "confirmed": true
+    },
+    "kya": {
+      "standard_form": "kya",
+      "ayush_count": 967,
+      "confirmed": true
+    },
+    "bhi": {
+      "standard_form": "bhi",
+      "ayush_count": 1295,
+      "confirmed": true
+    },
+    "me": {
+      "standard_form": "mein",
+      "ayush_count": 1761,
+      "confirmed": true
+    },
+    "bol": {
+      "standard_form": "bol",
+      "ayush_count": 148,
+      "confirmed": true
+    },
+    "Ho": {
+      "standard_form": "ho",
+      "ayush_count": 70,
+      "confirmed": true
+    },
+    "jao": {
+      "standard_form": "jao",
+      "ayush_count": 28,
+      "confirmed": true
+    },
+    "sab": {
+      "standard_form": "sab",
+      "ayush_count": 120,
+      "confirmed": true
+    },
+    "rha": {
+      "standard_form": "raha",
+      "ayush_count": 4,
+      "confirmed": true
+    },
+    "rahi": {
+      "standard_form": "rahi",
+      "ayush_count": 412,
+      "confirmed": true
+    },
+    "rah": {
+      "standard_form": "raha",
+      "ayush_count": 398,
+      "confirmed": true
+    },
+    "isake": {
+      "standard_form": "iske",
+      "ayush_count": 55,
+      "confirmed": true
+    },
+    "teri": {
+      "standard_form": "teri",
+      "ayush_count": 82,
+      "confirmed": true
+    },
+    "meri": {
+      "standard_form": "meri",
+      "ayush_count": 91,
+      "confirmed": true
+    },
+    "Hmm": {
+      "standard_form": "hmm",
+      "ayush_count": 640,
+      "confirmed": true
+    },
+    "Ook": {
+      "standard_form": "ok",
+      "ayush_count": 489,
+      "confirmed": true
+    },
+    "Sahi": {
+      "standard_form": "sahi",
+      "ayush_count": 88,
+      "confirmed": true
+    }
+  },
+  "emoji_profile": {
+    "total_messages": 17902,
+    "messages_with_emojis": 3226,
+    "emoji_usage_rate": 18.02,
+    "top_emojis": [
+      {
+        "emoji": "😅",
+        "count": 854,
+        "frequency_pct": 4.77,
+        "sample_contexts": [
+          "to kya kar rahi thi?",
+          "Tera?\nYe jindagi kya kya dikhayegi",
+          ", itna gira hua hu me",
+          "Kaha gayi , try karne hi chali gai",
+          "ye sarcasm kyu laga"
+        ]
+      },
+      {
+        "emoji": "🤣",
+        "count": 849,
+        "frequency_pct": 4.74,
+        "sample_contexts": [
+          "sachi me, tu mere re galiyo me bat karna chahti h",
+          "ook",
+          "Yahi to problem h tu bol ke bhul jati h <This message was edited>",
+          "Yahi to problem h tu bol ke bhul jati h <This message was edited>",
+          "Mood"
+        ]
+      },
+      {
+        "emoji": "🌄",
+        "count": 538,
+        "frequency_pct": 3.01,
+        "sample_contexts": [
+          "Good morning",
+          "Good morning",
+          "Good morning",
+          "Good morning",
+          "Good morning"
+        ]
+      },
+      {
+        "emoji": "🌉",
+        "count": 465,
+        "frequency_pct": 2.6,
+        "sample_contexts": [
+          "Good night",
+          "Good night",
+          "Good night",
+          "Good night",
+          "Good night"
+        ]
+      },
+      {
+        "emoji": "😂",
+        "count": 374,
+        "frequency_pct": 2.09,
+        "sample_contexts": [
+          "Sikha Rahi h",
+          "Ha , esi pe rok lagane ke liye",
+          "hamara pyara yash arya",
+          "hamara pyara yash arya",
+          "Maja tha ,(,,)"
+        ]
+      },
+      {
+        "emoji": "😈",
+        "count": 247,
+        "frequency_pct": 1.38,
+        "sample_contexts": [
+          "Ha me keha rah tha jisake bhi pese hadpe mere ko commission de dena",
+          "Mera mobail hack kar , account details nikal,",
+          "Tere jan pehachan .e to koi to hoga jisase hadap sake",
+          "kon?\nHamla karenge",
+          "usako call kar kar ke pagal kar deta hu"
+        ]
+      },
+      {
+        "emoji": "🤔",
+        "count": 171,
+        "frequency_pct": 0.96,
+        "sample_contexts": [
+          "mmmm",
+          "Yee",
+          "Yee",
+          "Hmm matalab exact main gate kam ho jayega",
+          "Nice"
+        ]
+      },
+      {
+        "emoji": "👆",
+        "count": 159,
+        "frequency_pct": 0.89,
+        "sample_contexts": [
+          "Yee",
+          "ye mene esaliye bheja kyuki mujhe ye save karna tha",
+          "??",
+          "??",
+          "Ese to me conclude karta hu , zaban kese lada lunga"
+        ]
+      },
+      {
+        "emoji": "🙏",
+        "count": 141,
+        "frequency_pct": 0.79,
+        "sample_contexts": [
+          "ek game pe tik ja",
+          "Date bata dunga bas niche aa jana devi",
+          "Date bata dunga bas niche aa jana devi",
+          "bechara piyush",
+          "bechara piyush"
+        ]
+      },
+      {
+        "emoji": "👍",
+        "count": 120,
+        "frequency_pct": 0.67,
+        "sample_contexts": [
+          "Isame to problem nahi h na, bas clg ke bahar aana h",
+          "Isame to problem nahi h na, bas clg ke bahar aana h",
+          "Itana hi kafi h",
+          "Pahuch gaye",
+          "Mera nam liya to pehale Tereko jail me dalege phir pagal khane me"
+        ]
+      },
+      {
+        "emoji": "😱",
+        "count": 118,
+        "frequency_pct": 0.66,
+        "sample_contexts": [
+          "4 baje tak padha Rahi thi",
+          "Hooo .\nHar din jinko agarbatti dikhati h unake bare me esi bate",
+          "Hooo .\nHar din jinko agarbatti dikhati h unake bare me esi bate",
+          "kese , kyu , nahiiiii",
+          "kese , kyu , nahiiiii"
+        ]
+      },
+      {
+        "emoji": "😎",
+        "count": 100,
+        "frequency_pct": 0.56,
+        "sample_contexts": [
+          "I know",
+          "Try kar ke dekha le",
+          "Abhi time h",
+          "Tp",
+          "Dekha , is liye keha rah tha"
+        ]
+      },
+      {
+        "emoji": "🥲",
+        "count": 88,
+        "frequency_pct": 0.49,
+        "sample_contexts": [
+          "kya fayda , jab tak 1 bhi h Akshay aa jaega, ho gaye 2",
+          "phele is or ka kyuch karna padega",
+          "Itani jaldi har bhi gayi?\nEse kese maja aayega",
+          "Abhi or kam baki h",
+          "bechara"
+        ]
+      },
+      {
+        "emoji": "🫠",
+        "count": 85,
+        "frequency_pct": 0.47,
+        "sample_contexts": [
+          "Tune jo Holi me kiya tha na bas wahi karna hai",
+          "har type ki , kesi karni chahe gi <This message was edited>",
+          "har type ki , kesi karni chahe gi <This message was edited>",
+          "Pese milege kya isake liye , kyu ki sachi bata rah hu aasan kam to bilkul nahi h",
+          "Bahut kyuch"
+        ]
+      },
+      {
+        "emoji": "🙃",
+        "count": 63,
+        "frequency_pct": 0.35,
+        "sample_contexts": [
+          "Ha pata h",
+          "Okkk",
+          "Oo direct PIN",
+          "Abhi to kaha tha nahi hadpe rahi mere pese,\nOr hadpe to bhi mere ko hi dena 100%",
+          "ye bhi dekha lete h"
+        ]
+      },
+      {
+        "emoji": "🥹",
+        "count": 53,
+        "frequency_pct": 0.3,
+        "sample_contexts": [
+          "Me",
+          "Me",
+          "Me",
+          "galti se,\nKyu me bhi cheez bhulane laga hu kya?",
+          "Kyu"
+        ]
+      },
+      {
+        "emoji": "😭",
+        "count": 50,
+        "frequency_pct": 0.28,
+        "sample_contexts": [
+          "Harry Potter wali gif ab mujhe nahi mil Rahi",
+          "Harry Potter wali gif ab mujhe nahi mil Rahi",
+          "to bola kyu",
+          "to bola kyu",
+          "to bola kyu"
+        ]
+      },
+      {
+        "emoji": "🏻",
+        "count": 32,
+        "frequency_pct": 0.18,
+        "sample_contexts": [
+          "Happy Holi Satakshi",
+          "pata nahi",
+          "shama kare devi",
+          "shama kare devi"
+        ]
+      },
+      {
+        "emoji": "🥵",
+        "count": 30,
+        "frequency_pct": 0.17,
+        "sample_contexts": [
+          "Phir ek bar to break bhi le liya",
+          "Phir ek bar to break bhi le liya",
+          "Bada mushkil h hindi likhana",
+          "Bada mushkil h hindi likhana",
+          "Bahut mehanat ka kam h"
+        ]
+      },
+      {
+        "emoji": "️",
+        "count": 29,
+        "frequency_pct": 0.16,
+        "sample_contexts": [
+          "Aacha to me hu",
+          "# peace  for now at least",
+          "# peace  for now at least",
+          "Due to rain",
+          "Due to rain"
+        ]
+      },
+      {
+        "emoji": "💀",
+        "count": 29,
+        "frequency_pct": 0.16,
+        "sample_contexts": []
+      },
+      {
+        "emoji": "🥰",
+        "count": 22,
+        "frequency_pct": 0.12,
+        "sample_contexts": [
+          "Thodi gol mol, thodi choti = cutie",
+          "3 tarike h kis tarike se godi uthana chahengi cutie  <This message was edited>",
+          "Thanks",
+          "Ha , ye to h",
+          "aacha ji"
+        ]
+      },
+      {
+        "emoji": "✋",
+        "count": 18,
+        "frequency_pct": 0.1,
+        "sample_contexts": [
+          "Jai",
+          "Tatha aastu",
+          "Tatha aastu sune gi",
+          "Tatha astu",
+          "Tatha astu"
+        ]
+      },
+      {
+        "emoji": "😏",
+        "count": 18,
+        "frequency_pct": 0.1,
+        "sample_contexts": [
+          "Ha",
+          "Hmm",
+          "Yad h",
+          "Batana nahi chahati",
+          "Keha sakte h ,\nPar hath me to mere h na that's matter, <This message was edited>"
+        ]
+      },
+      {
+        "emoji": "😘",
+        "count": 17,
+        "frequency_pct": 0.09,
+        "sample_contexts": [
+          "Sweet dreams",
+          "Oor kyuch",
+          "Oor kyuch",
+          "Pareshan to mene Kiya hi nahi",
+          "Kitani pyari lag rahi h"
+        ]
+      },
+      {
+        "emoji": "🤫",
+        "count": 16,
+        "frequency_pct": 0.09,
+        "sample_contexts": [
+          "Ok",
+          "ok",
+          "ok",
+          "Ook",
+          "Ook"
+        ]
+      },
+      {
+        "emoji": "🌅",
+        "count": 14,
+        "frequency_pct": 0.08,
+        "sample_contexts": [
+          "Good morning",
+          "Good morning",
+          "Tatha astu\nMorning",
+          "Good morning  <This message was edited>",
+          "Good morning  <This message was edited>"
+        ]
+      },
+      {
+        "emoji": "🤓",
+        "count": 14,
+        "frequency_pct": 0.08,
+        "sample_contexts": [
+          "Instagram wale bhi nahi samjha paye",
+          "Instagram wale bhi nahi samjha paye",
+          "De to diya",
+          "De to diya",
+          "I have defined every thing"
+        ]
+      },
+      {
+        "emoji": "🎉",
+        "count": 13,
+        "frequency_pct": 0.07,
+        "sample_contexts": [
+          "Apko aapka phela follower mil gaya , congratulations",
+          "Apko aapka phela follower mil gaya , congratulations",
+          "Apko aapka phela follower mil gaya , congratulations",
+          "Aaj to party  <This message was edited>",
+          "Aaj to party  <This message was edited>"
+        ]
+      },
+      {
+        "emoji": "😊",
+        "count": 13,
+        "frequency_pct": 0.07,
+        "sample_contexts": [
+          "Good",
+          "Wah",
+          "Good",
+          "aacha jana tha",
+          "Good"
+        ]
+      }
+    ]
+  },
+  "message_lengths": {
+    "total_messages": 17902,
+    "char_length": {
+      "min": 1,
+      "max": 3729,
+      "mean": 24.2,
+      "median": 16,
+      "p25": 6,
+      "p75": 32,
+      "p90": 53
+    },
+    "word_count": {
+      "min": 1,
+      "max": 504,
+      "mean": 5.5,
+      "median": 4,
+      "p25": 1,
+      "p75": 7,
+      "p90": 12
+    },
+    "length_buckets": {
+      "1-10_chars": 6284,
+      "11-30_chars": 6821,
+      "31-60_chars": 3475,
+      "61-100_chars": 1004,
+      "100+_chars": 318
+    }
+  },
+  "greetings_and_closings": {
+    "morning_greetings": [
+      {
+        "text": "Good morning 🌄🌄🌄",
+        "count": 145
+      },
+      {
+        "text": "Good morning 🌄",
+        "count": 65
+      },
+      {
+        "text": "Good morning 🌄🌄",
+        "count": 9
+      },
+      {
+        "text": "Good morning",
+        "count": 7
+      },
+      {
+        "text": "good morning",
+        "count": 3
+      },
+      {
+        "text": "Good morning 🌅🌅🌅",
+        "count": 3
+      },
+      {
+        "text": "Good morning 🌅",
+        "count": 2
+      },
+      {
+        "text": "Good morning 🌄\nThank",
+        "count": 1
+      },
+      {
+        "text": "Good morning 🌄\nAnd sorry",
+        "count": 1
+      },
+      {
+        "text": "Good morning 🌄 <This message was edited>",
+        "count": 1
+      }
+    ],
+    "night_closings": [
+      {
+        "text": "Good night 🌉🌉🌉",
+        "count": 125
+      },
+      {
+        "text": "Good night 🌉🌉",
+        "count": 8
+      },
+      {
+        "text": "Good night",
+        "count": 6
+      },
+      {
+        "text": "Good night 🌉",
+        "count": 6
+      },
+      {
+        "text": "good night",
+        "count": 4
+      },
+      {
+        "text": "Good night 🌉🌉🌉 <This message was edited>",
+        "count": 3
+      },
+      {
+        "text": "Ook good night 🌉🌉🌉",
+        "count": 3
+      },
+      {
+        "text": "Good night 🌉💤",
+        "count": 1
+      },
+      {
+        "text": "Ok good night 🌉",
+        "count": 1
+      },
+      {
+        "text": "Good night <This message was edited>",
+        "count": 1
+      }
+    ]
+  },
+  "short_responses": {
+    "top_short_responses": [
+      {
+        "text": "Hmm",
+        "count": 472
+      },
+      {
+        "text": "Ook",
+        "count": 400
+      },
+      {
+        "text": "Ha",
+        "count": 262
+      },
+      {
+        "text": "😅",
+        "count": 207
+      },
+      {
+        "text": "🤣",
+        "count": 151
+      },
+      {
+        "text": "Good morning 🌄🌄🌄",
+        "count": 145
+      },
+      {
+        "text": "Good",
+        "count": 127
+      },
+      {
+        "text": "Good night 🌉🌉🌉",
+        "count": 125
+      },
+      {
+        "text": "Nahi",
+        "count": 96
+      },
+      {
+        "text": "🤣🤣",
+        "count": 95
+      },
+      {
+        "text": "Aacha",
+        "count": 92
+      },
+      {
+        "text": "Kkrh?",
+        "count": 85
+      },
+      {
+        "text": "Hmmm",
+        "count": 66
+      },
+      {
+        "text": "Good morning 🌄",
+        "count": 65
+      },
+      {
+        "text": "Oook",
+        "count": 51
+      },
+      {
+        "text": "Tu?",
+        "count": 51
+      },
+      {
+        "text": "😂",
+        "count": 50
+      },
+      {
+        "text": "Sahi h",
+        "count": 50
+      },
+      {
+        "text": "😂😂",
+        "count": 47
+      },
+      {
+        "text": "?",
+        "count": 44
+      },
+      {
+        "text": "👆",
+        "count": 43
+      },
+      {
+        "text": "Kyu?",
+        "count": 41
+      },
+      {
+        "text": "Call?",
+        "count": 38
+      },
+      {
+        "text": "Kya hua?",
+        "count": 35
+      },
+      {
+        "text": "🥲",
+        "count": 35
+      },
+      {
+        "text": "Thanks",
+        "count": 35
+      },
+      {
+        "text": "Ha ji",
+        "count": 32
+      },
+      {
+        "text": "Shabash",
+        "count": 31
+      },
+      {
+        "text": "👆👆",
+        "count": 31
+      },
+      {
+        "text": "Good girl",
+        "count": 29
+      },
+      {
+        "text": "Ik",
+        "count": 28
+      },
+      {
+        "text": "Tere se bat",
+        "count": 28
+      },
+      {
+        "text": "Na",
+        "count": 27
+      },
+      {
+        "text": "Koi na",
+        "count": 27
+      },
+      {
+        "text": "Ooo",
+        "count": 25
+      },
+      {
+        "text": "🙏",
+        "count": 25
+      },
+      {
+        "text": "Aacha ji",
+        "count": 25
+      },
+      {
+        "text": "Ok",
+        "count": 24
+      },
+      {
+        "text": "Tu kkrh?",
+        "count": 22
+      },
+      {
+        "text": "Kya jana h",
+        "count": 22
+      },
+      {
+        "text": "Add to favorites",
+        "count": 21
+      },
+      {
+        "text": "🤔",
+        "count": 21
+      },
+      {
+        "text": "Tp",
+        "count": 20
+      },
+      {
+        "text": "Kya?",
+        "count": 20
+      },
+      {
+        "text": "Bolo",
+        "count": 20
+      },
+      {
+        "text": "😈😈",
+        "count": 19
+      },
+      {
+        "text": "🫠",
+        "count": 19
+      },
+      {
+        "text": "Nahi to",
+        "count": 19
+      },
+      {
+        "text": "Yo",
+        "count": 18
+      },
+      {
+        "text": "Tune?",
+        "count": 17
+      }
+    ]
+  },
+  "burst_patterns": {
+    "total_bursts": 11230,
+    "avg_burst_length": 1.59,
+    "max_burst_length": 16,
+    "burst_size_distribution": {
+      "1": 6875,
+      "2": 2921,
+      "3": 944,
+      "4": 289,
+      "5": 114,
+      "6": 39,
+      "7": 22,
+      "8": 13,
+      "9": 7,
+      "10": 2
+    },
+    "single_message_pct": 61.2,
+    "multi_message_pct": 38.8
+  },
+  "time_patterns": {
+    "hourly_distribution": {
+      "00:00": 1694,
+      "01:00": 1052,
+      "02:00": 311,
+      "03:00": 165,
+      "04:00": 28,
+      "05:00": 50,
+      "06:00": 123,
+      "07:00": 323,
+      "08:00": 701,
+      "09:00": 757,
+      "10:00": 804,
+      "11:00": 573,
+      "12:00": 755,
+      "13:00": 829,
+      "14:00": 713,
+      "15:00": 709,
+      "16:00": 688,
+      "17:00": 655,
+      "18:00": 554,
+      "19:00": 613,
+      "20:00": 703,
+      "21:00": 1325,
+      "22:00": 1650,
+      "23:00": 2127
+    },
+    "daily_distribution": {
+      "Sunday": 2950,
+      "Saturday": 2823,
+      "Tuesday": 2711,
+      "Thursday": 2526,
+      "Monday": 2376,
+      "Friday": 2335,
+      "Wednesday": 2181
+    },
+    "peak_hours": [
+      "23:00",
+      "00:00",
+      "22:00",
+      "21:00",
+      "01:00"
+    ]
+  },
+  "per_chat_breakdown": {
+    "class_cr": {
+      "message_count": 9770,
+      "message_lengths": {
+        "total_messages": 9770,
+        "char_length": {
+          "min": 1,
+          "max": 920,
+          "mean": 24.2,
+          "median": 16,
+          "p25": 7,
+          "p75": 32,
+          "p90": 54
+        },
+        "word_count": {
+          "min": 1,
+          "max": 162,
+          "mean": 5.4,
+          "median": 4,
+          "p25": 1,
+          "p75": 7,
+          "p90": 12
+        },
+        "length_buckets": {
+          "1-10_chars": 3342,
+          "11-30_chars": 3805,
+          "31-60_chars": 1877,
+          "61-100_chars": 579,
+          "100+_chars": 167
+        }
+      },
+      "emoji_profile": {
+        "total_messages": 9770,
+        "messages_with_emojis": 1781,
+        "emoji_usage_rate": 18.23,
+        "top_emojis": [
+          {
+            "emoji": "🤣",
+            "count": 474,
+            "frequency_pct": 4.85,
+            "sample_contexts": [
+              "sachi me, tu mere re galiyo me bat karna chahti h",
+              "ook",
+              "Yahi to problem h tu bol ke bhul jati h <This message was edited>",
+              "Yahi to problem h tu bol ke bhul jati h <This message was edited>",
+              "Mood"
+            ]
+          },
+          {
+            "emoji": "😅",
+            "count": 464,
+            "frequency_pct": 4.75,
+            "sample_contexts": [
+              "to kya kar rahi thi?",
+              "Tera?\nYe jindagi kya kya dikhayegi",
+              ", itna gira hua hu me",
+              "Kaha gayi , try karne hi chali gai",
+              "ye sarcasm kyu laga"
+            ]
+          },
+          {
+            "emoji": "🌄",
+            "count": 354,
+            "frequency_pct": 3.62,
+            "sample_contexts": [
+              "Good morning",
+              "Good morning",
+              "Good morning",
+              "Good morning",
+              "Good morning"
+            ]
+          },
+          {
+            "emoji": "🌉",
+            "count": 264,
+            "frequency_pct": 2.7,
+            "sample_contexts": [
+              "Good night",
+              "Good night",
+              "Good night",
+              "Good night",
+              "Good night"
+            ]
+          },
+          {
+            "emoji": "😂",
+            "count": 256,
+            "frequency_pct": 2.62,
+            "sample_contexts": [
+              "Sikha Rahi h",
+              "Ha , esi pe rok lagane ke liye",
+              "hamara pyara yash arya",
+              "hamara pyara yash arya",
+              "Maja tha ,(,,)"
+            ]
+          },
+          {
+            "emoji": "😈",
+            "count": 182,
+            "frequency_pct": 1.86,
+            "sample_contexts": [
+              "Ha me keha rah tha jisake bhi pese hadpe mere ko commission de dena",
+              "Mera mobail hack kar , account details nikal,",
+              "Tere jan pehachan .e to koi to hoga jisase hadap sake",
+              "kon?\nHamla karenge",
+              "usako call kar kar ke pagal kar deta hu"
+            ]
+          },
+          {
+            "emoji": "👆",
+            "count": 113,
+            "frequency_pct": 1.16,
+            "sample_contexts": [
+              "Yee",
+              "ye mene esaliye bheja kyuki mujhe ye save karna tha",
+              "??",
+              "??",
+              "Ese to me conclude karta hu , zaban kese lada lunga"
+            ]
+          },
+          {
+            "emoji": "🤔",
+            "count": 92,
+            "frequency_pct": 0.94,
+            "sample_contexts": [
+              "mmmm",
+              "Yee",
+              "Yee",
+              "Hmm matalab exact main gate kam ho jayega",
+              "Nice"
+            ]
+          },
+          {
+            "emoji": "👍",
+            "count": 71,
+            "frequency_pct": 0.73,
+            "sample_contexts": [
+              "Isame to problem nahi h na, bas clg ke bahar aana h",
+              "Isame to problem nahi h na, bas clg ke bahar aana h",
+              "Itana hi kafi h",
+              "Pahuch gaye",
+              "Mera nam liya to pehale Tereko jail me dalege phir pagal khane me"
+            ]
+          },
+          {
+            "emoji": "😎",
+            "count": 70,
+            "frequency_pct": 0.72,
+            "sample_contexts": [
+              "I know",
+              "Try kar ke dekha le",
+              "Abhi time h",
+              "Tp",
+              "Dekha , is liye keha rah tha"
+            ]
+          },
+          {
+            "emoji": "😱",
+            "count": 68,
+            "frequency_pct": 0.7,
+            "sample_contexts": [
+              "4 baje tak padha Rahi thi",
+              "Hooo .\nHar din jinko agarbatti dikhati h unake bare me esi bate",
+              "Hooo .\nHar din jinko agarbatti dikhati h unake bare me esi bate",
+              "kese , kyu , nahiiiii",
+              "kese , kyu , nahiiiii"
+            ]
+          },
+          {
+            "emoji": "🙏",
+            "count": 58,
+            "frequency_pct": 0.59,
+            "sample_contexts": [
+              "ek game pe tik ja",
+              "Date bata dunga bas niche aa jana devi",
+              "Date bata dunga bas niche aa jana devi",
+              "bechara piyush",
+              "bechara piyush"
+            ]
+          },
+          {
+            "emoji": "🥲",
+            "count": 53,
+            "frequency_pct": 0.54,
+            "sample_contexts": [
+              "kya fayda , jab tak 1 bhi h Akshay aa jaega, ho gaye 2",
+              "phele is or ka kyuch karna padega",
+              "Itani jaldi har bhi gayi?\nEse kese maja aayega",
+              "Abhi or kam baki h",
+              "bechara"
+            ]
+          },
+          {
+            "emoji": "🫠",
+            "count": 43,
+            "frequency_pct": 0.44,
+            "sample_contexts": [
+              "Tune jo Holi me kiya tha na bas wahi karna hai",
+              "har type ki , kesi karni chahe gi <This message was edited>",
+              "har type ki , kesi karni chahe gi <This message was edited>",
+              "Pese milege kya isake liye , kyu ki sachi bata rah hu aasan kam to bilkul nahi h",
+              "Bahut kyuch"
+            ]
+          },
+          {
+            "emoji": "🙃",
+            "count": 40,
+            "frequency_pct": 0.41,
+            "sample_contexts": [
+              "Ha pata h",
+              "Okkk",
+              "Oo direct PIN",
+              "Abhi to kaha tha nahi hadpe rahi mere pese,\nOr hadpe to bhi mere ko hi dena 100%",
+              "ye bhi dekha lete h"
+            ]
+          },
+          {
+            "emoji": "😭",
+            "count": 31,
+            "frequency_pct": 0.32,
+            "sample_contexts": [
+              "Harry Potter wali gif ab mujhe nahi mil Rahi",
+              "Harry Potter wali gif ab mujhe nahi mil Rahi",
+              "to bola kyu",
+              "to bola kyu",
+              "to bola kyu"
+            ]
+          },
+          {
+            "emoji": "💀",
+            "count": 28,
+            "frequency_pct": 0.29,
+            "sample_contexts": []
+          },
+          {
+            "emoji": "🥹",
+            "count": 23,
+            "frequency_pct": 0.24,
+            "sample_contexts": [
+              "Me",
+              "Me",
+              "Me",
+              "galti se,\nKyu me bhi cheez bhulane laga hu kya?",
+              "Kyu"
+            ]
+          },
+          {
+            "emoji": "️",
+            "count": 18,
+            "frequency_pct": 0.18,
+            "sample_contexts": [
+              "Aacha to me hu",
+              "# peace  for now at least",
+              "# peace  for now at least",
+              "Due to rain",
+              "Due to rain"
+            ]
+          },
+          {
+            "emoji": "✋",
+            "count": 18,
+            "frequency_pct": 0.18,
+            "sample_contexts": [
+              "Jai",
+              "Tatha aastu",
+              "Tatha aastu sune gi",
+              "Tatha astu",
+              "Tatha astu"
+            ]
+          },
+          {
+            "emoji": "🥵",
+            "count": 15,
+            "frequency_pct": 0.15,
+            "sample_contexts": [
+              "Phir ek bar to break bhi le liya",
+              "Phir ek bar to break bhi le liya",
+              "Bada mushkil h hindi likhana",
+              "Bada mushkil h hindi likhana",
+              "Me kabhi nahi kar paunga , vo bhi ghar walo se bat karte hue chatting"
+            ]
+          },
+          {
+            "emoji": "🤫",
+            "count": 14,
+            "frequency_pct": 0.14,
+            "sample_contexts": [
+              "Ok",
+              "ok",
+              "ok",
+              "Ook",
+              "Ook"
+            ]
+          },
+          {
+            "emoji": "🙄",
+            "count": 12,
+            "frequency_pct": 0.12,
+            "sample_contexts": [
+              "Mene to moka Diya tha tu hi nahi mani",
+              "Kyaaaaaaa",
+              "Kyaaaaaaa",
+              "Fuck",
+              "ab thik h , ya abhi bhi h"
+            ]
+          },
+          {
+            "emoji": "🏻",
+            "count": 11,
+            "frequency_pct": 0.11,
+            "sample_contexts": [
+              "Happy Holi Satakshi",
+              "shama kare devi",
+              "shama kare devi"
+            ]
+          },
+          {
+            "emoji": "🤓",
+            "count": 11,
+            "frequency_pct": 0.11,
+            "sample_contexts": [
+              "Instagram wale bhi nahi samjha paye",
+              "Instagram wale bhi nahi samjha paye",
+              "De to diya",
+              "De to diya",
+              "I have defined every thing"
+            ]
+          },
+          {
+            "emoji": "🎉",
+            "count": 11,
+            "frequency_pct": 0.11,
+            "sample_contexts": [
+              "Apko aapka phela follower mil gaya , congratulations",
+              "Apko aapka phela follower mil gaya , congratulations",
+              "Apko aapka phela follower mil gaya , congratulations",
+              "Good",
+              "Good"
+            ]
+          },
+          {
+            "emoji": "😘",
+            "count": 10,
+            "frequency_pct": 0.1,
+            "sample_contexts": [
+              "Sweet dreams",
+              "Oor kyuch",
+              "Oor kyuch",
+              "Pareshan to mene Kiya hi nahi",
+              "Kitani pyari lag rahi h"
+            ]
+          },
+          {
+            "emoji": "💖",
+            "count": 9,
+            "frequency_pct": 0.09,
+            "sample_contexts": [
+              "Thanks for giving with this position",
+              "[7/20, 11:22AM] Jannu : Mmhm\n[7/20, 11:22AM] Jannu : Aur kya suna h?",
+              "[7/20, 11:22AM] Jannu : Mmhm\n[7/20, 11:22AM] Jannu : Aur kya suna h?"
+            ]
+          },
+          {
+            "emoji": "🌞",
+            "count": 9,
+            "frequency_pct": 0.09,
+            "sample_contexts": [
+              "Good noon",
+              "Good noon",
+              "Good noon",
+              "Good afternoon",
+              "Good afternoon"
+            ]
+          },
+          {
+            "emoji": "🌅",
+            "count": 8,
+            "frequency_pct": 0.08,
+            "sample_contexts": [
+              "Good morning",
+              "Good morning",
+              "Tatha astu\nMorning",
+              "Good morning  <This message was edited>",
+              "Good morning  <This message was edited>"
+            ]
+          }
+        ]
+      },
+      "greetings": {
+        "morning_greetings": [
+          {
+            "text": "Good morning 🌄🌄🌄",
+            "count": 86
+          },
+          {
+            "text": "Good morning 🌄",
+            "count": 63
+          },
+          {
+            "text": "Good morning 🌄🌄",
+            "count": 8
+          },
+          {
+            "text": "Good morning",
+            "count": 4
+          },
+          {
+            "text": "good morning",
+            "count": 3
+          },
+          {
+            "text": "Good morning 🌅",
+            "count": 2
+          },
+          {
+            "text": "Good morning 🌄\nThank",
+            "count": 1
+          },
+          {
+            "text": "Good morning 🌄\nAnd sorry",
+            "count": 1
+          },
+          {
+            "text": "Good morning 🌄 <This message was edited>",
+            "count": 1
+          },
+          {
+            "text": "Le re ab good morning ke jagha yahi kahunga 🤣",
+            "count": 1
+          }
+        ],
+        "night_closings": [
+          {
+            "text": "Good night 🌉🌉🌉",
+            "count": 72
+          },
+          {
+            "text": "Good night",
+            "count": 5
+          },
+          {
+            "text": "Good night 🌉",
+            "count": 5
+          },
+          {
+            "text": "Good night 🌉🌉",
+            "count": 4
+          },
+          {
+            "text": "good night",
+            "count": 4
+          },
+          {
+            "text": "Good night 🌉🌉🌉 <This message was edited>",
+            "count": 3
+          },
+          {
+            "text": "Good night 🌉💤",
+            "count": 1
+          },
+          {
+            "text": "Ok good night 🌉",
+            "count": 1
+          },
+          {
+            "text": "Good night <This message was edited>",
+            "count": 1
+          },
+          {
+            "text": "Good night 🌉🌉🌉\nGood morning 🌄🌄🌄",
+            "count": 1
+          }
+        ]
+      },
+      "short_responses": {
+        "top_short_responses": [
+          {
+            "text": "Ook",
+            "count": 202
+          },
+          {
+            "text": "Ha",
+            "count": 164
+          },
+          {
+            "text": "Hmm",
+            "count": 159
+          },
+          {
+            "text": "😅",
+            "count": 111
+          },
+          {
+            "text": "Good morning 🌄🌄🌄",
+            "count": 86
+          },
+          {
+            "text": "Good night 🌉🌉🌉",
+            "count": 72
+          },
+          {
+            "text": "Kkrh?",
+            "count": 70
+          },
+          {
+            "text": "Good morning 🌄",
+            "count": 63
+          },
+          {
+            "text": "Nahi",
+            "count": 57
+          },
+          {
+            "text": "🤣🤣",
+            "count": 53
+          },
+          {
+            "text": "🤣",
+            "count": 49
+          },
+          {
+            "text": "Good",
+            "count": 47
+          },
+          {
+            "text": "Tu?",
+            "count": 44
+          },
+          {
+            "text": "Hmmm",
+            "count": 38
+          },
+          {
+            "text": "😂😂",
+            "count": 37
+          },
+          {
+            "text": "Shabash",
+            "count": 31
+          },
+          {
+            "text": "?",
+            "count": 26
+          },
+          {
+            "text": "Sahi h",
+            "count": 25
+          },
+          {
+            "text": "Oook",
+            "count": 23
+          },
+          {
+            "text": "Call?",
+            "count": 23
+          },
+          {
+            "text": "👆",
+            "count": 23
+          },
+          {
+            "text": "👆👆",
+            "count": 23
+          },
+          {
+            "text": "😂",
+            "count": 22
+          },
+          {
+            "text": "Aacha",
+            "count": 21
+          },
+          {
+            "text": "Ok",
+            "count": 19
+          },
+          {
+            "text": "Na",
+            "count": 19
+          },
+          {
+            "text": "🥲",
+            "count": 18
+          },
+          {
+            "text": "Kya hua?",
+            "count": 17
+          },
+          {
+            "text": "Kyu?",
+            "count": 16
+          },
+          {
+            "text": "Tp",
+            "count": 16
+          },
+          {
+            "text": "Tu kkrh?",
+            "count": 16
+          },
+          {
+            "text": "Good girl",
+            "count": 16
+          },
+          {
+            "text": "Ooo",
+            "count": 15
+          },
+          {
+            "text": "Tune?",
+            "count": 15
+          },
+          {
+            "text": "😈😈",
+            "count": 15
+          },
+          {
+            "text": "Tere se bat",
+            "count": 15
+          },
+          {
+            "text": "Add to favorites",
+            "count": 13
+          },
+          {
+            "text": "👍",
+            "count": 12
+          },
+          {
+            "text": "🙏",
+            "count": 12
+          },
+          {
+            "text": "🤔",
+            "count": 11
+          },
+          {
+            "text": "Tu",
+            "count": 11
+          },
+          {
+            "text": "Thanks",
+            "count": 11
+          },
+          {
+            "text": "Nahi to",
+            "count": 11
+          },
+          {
+            "text": "🤣🤣🤣",
+            "count": 10
+          },
+          {
+            "text": "Bol",
+            "count": 10
+          },
+          {
+            "text": "🫠",
+            "count": 10
+          },
+          {
+            "text": "Aacha ji",
+            "count": 10
+          },
+          {
+            "text": "😎",
+            "count": 9
+          },
+          {
+            "text": "Bye",
+            "count": 9
+          },
+          {
+            "text": "Wah",
+            "count": 9
+          }
+        ]
+      }
+    },
+    "shubhi": {
+      "message_count": 8132,
+      "message_lengths": {
+        "total_messages": 8132,
+        "char_length": {
+          "min": 1,
+          "max": 3729,
+          "mean": 24.1,
+          "median": 16,
+          "p25": 6,
+          "p75": 32,
+          "p90": 52
+        },
+        "word_count": {
+          "min": 1,
+          "max": 504,
+          "mean": 5.5,
+          "median": 4,
+          "p25": 1,
+          "p75": 7,
+          "p90": 12
+        },
+        "length_buckets": {
+          "1-10_chars": 2942,
+          "11-30_chars": 3016,
+          "31-60_chars": 1598,
+          "61-100_chars": 425,
+          "100+_chars": 151
+        }
+      },
+      "emoji_profile": {
+        "total_messages": 8132,
+        "messages_with_emojis": 1445,
+        "emoji_usage_rate": 17.77,
+        "top_emojis": [
+          {
+            "emoji": "😅",
+            "count": 390,
+            "frequency_pct": 4.8,
+            "sample_contexts": [
+              "Or teri aadat nahi jayegi",
+              "best",
+              "phir thik h",
+              "ha",
+              "oops"
+            ]
+          },
+          {
+            "emoji": "🤣",
+            "count": 375,
+            "frequency_pct": 4.61,
+            "sample_contexts": [
+              "Jese ki?",
+              "Jese ki?",
+              "Ha , ye to h",
+              "It's ok",
+              "Kab?"
+            ]
+          },
+          {
+            "emoji": "🌉",
+            "count": 201,
+            "frequency_pct": 2.47,
+            "sample_contexts": [
+              "Good night",
+              "Good night",
+              "Good night",
+              "Good night",
+              "Good night"
+            ]
+          },
+          {
+            "emoji": "🌄",
+            "count": 184,
+            "frequency_pct": 2.26,
+            "sample_contexts": [
+              "Good morning",
+              "Good morning",
+              "Good morning",
+              "Good morning",
+              "Good morning"
+            ]
+          },
+          {
+            "emoji": "😂",
+            "count": 118,
+            "frequency_pct": 1.45,
+            "sample_contexts": [
+              "Ha",
+              "Best option",
+              "Mal defective nikala to vapis nahi hoga",
+              "Mal defective nikala to vapis nahi hoga",
+              "Ha"
+            ]
+          },
+          {
+            "emoji": "🙏",
+            "count": 83,
+            "frequency_pct": 1.02,
+            "sample_contexts": [
+              "ye kya group h",
+              "ye kya group h",
+              "ye kya group h",
+              "Wah",
+              "Wah"
+            ]
+          },
+          {
+            "emoji": "🤔",
+            "count": 79,
+            "frequency_pct": 0.97,
+            "sample_contexts": [
+              "To do pyari chez h or do bina kam ki",
+              "To do pyari chez h or do bina kam ki",
+              "Exact ISI moment per to Shayad nahin",
+              "me share ki mamale me bahut aajib hu",
+              "Nahi soch pa rah"
+            ]
+          },
+          {
+            "emoji": "😈",
+            "count": 65,
+            "frequency_pct": 0.8,
+            "sample_contexts": [
+              "Esi me to maja h",
+              "Man nahi kar rah",
+              "Man nahi kar rah",
+              "It's keep things uncertainty  for every body",
+              "NaPg me yahi to karta rehata hu me"
+            ]
+          },
+          {
+            "emoji": "😱",
+            "count": 50,
+            "frequency_pct": 0.61,
+            "sample_contexts": [
+              "Kyu?",
+              "Kyu?",
+              "Itane jaldi",
+              "Itane jaldi",
+              "Itane jaldi"
+            ]
+          },
+          {
+            "emoji": "👍",
+            "count": 49,
+            "frequency_pct": 0.6,
+            "sample_contexts": [
+              "best",
+              "Good match",
+              "Good match",
+              "Wah 12 ke bad bhi padha Rahi ho aacha h",
+              "Isake liye to padhana padega"
+            ]
+          },
+          {
+            "emoji": "👆",
+            "count": 46,
+            "frequency_pct": 0.57,
+            "sample_contexts": [
+              "Ye kya h",
+              "flirting skills",
+              "ye dhayan se",
+              "to phir"
+            ]
+          },
+          {
+            "emoji": "🫠",
+            "count": 42,
+            "frequency_pct": 0.52,
+            "sample_contexts": [
+              "Or teri aadat nahi jayegi",
+              "Diplomacy",
+              "Diplomacy",
+              "kya makkhan Laga leti Hai",
+              "kya makkhan Laga leti Hai"
+            ]
+          },
+          {
+            "emoji": "🥲",
+            "count": 35,
+            "frequency_pct": 0.43,
+            "sample_contexts": [
+              "Me bhi ,",
+              "Me bhi yahi sochata hu",
+              "Ab to yad bhi nahi kitane ka recharge karwa diya tha usane",
+              "phir gusa ho gayi devi",
+              "kyu kis liye"
+            ]
+          },
+          {
+            "emoji": "😎",
+            "count": 30,
+            "frequency_pct": 0.37,
+            "sample_contexts": [
+              "Mere se aacha jija ka to pata nahi par mere se jada aacha nahi ho sakata",
+              "2 sal se chod rakha h ye sab ,par ab apne room mate se jada chize dekha rakhi h",
+              "Try kar ke dekha sakte ho",
+              "Try kar ke dekha sakte ho",
+              "Ha vo to me rehata hu"
+            ]
+          },
+          {
+            "emoji": "🥹",
+            "count": 30,
+            "frequency_pct": 0.37,
+            "sample_contexts": [
+              "Sach",
+              "Sach",
+              "Bahut bura lag rah h",
+              "matalab nahi bhag sakta utha ke",
+              "Itane jaldi"
+            ]
+          },
+          {
+            "emoji": "🙃",
+            "count": 23,
+            "frequency_pct": 0.28,
+            "sample_contexts": [
+              "Itani priority di ja rahi h",
+              "Ek or nam bhi to h tumhare pas",
+              "hmmPata h",
+              "Ha h to",
+              "Bathroom me kab hoti h tu , tab call karuga"
+            ]
+          },
+          {
+            "emoji": "🏻",
+            "count": 21,
+            "frequency_pct": 0.26,
+            "sample_contexts": [
+              "pata nahi"
+            ]
+          },
+          {
+            "emoji": "😭",
+            "count": 19,
+            "frequency_pct": 0.23,
+            "sample_contexts": [
+              "At least pehale to",
+              "At least pehale to",
+              "tune ganna bheja tha na,",
+              "lamba kam ho gaya",
+              "Bye"
+            ]
+          },
+          {
+            "emoji": "🥵",
+            "count": 15,
+            "frequency_pct": 0.18,
+            "sample_contexts": [
+              "Bahut mehanat ka kam h",
+              "Me ese hi busy rehane wala adami hu , upar se ye or kar dete h",
+              "Research karni padegi",
+              "Itana pehanat ka kam",
+              "Itane bade message aaja tak nahi likhe"
+            ]
+          },
+          {
+            "emoji": "🥰",
+            "count": 14,
+            "frequency_pct": 0.17,
+            "sample_contexts": [
+              "Thodi gol mol, thodi choti = cutie",
+              "Thanks",
+              "Ha , ye to h",
+              "Say chiz",
+              "cute"
+            ]
+          },
+          {
+            "emoji": "️",
+            "count": 11,
+            "frequency_pct": 0.14,
+            "sample_contexts": [
+              "Or motive kya tha?",
+              "Or motive kya tha?",
+              "Or motive kya tha?",
+              "Looks se",
+              "↔ no"
+            ]
+          },
+          {
+            "emoji": "😏",
+            "count": 11,
+            "frequency_pct": 0.14,
+            "sample_contexts": [
+              "Batana nahi chahati",
+              "Or phir kya bate ki",
+              "Ook,If you say so",
+              "Chal ab ese bhi puch leta hu , kya karega tere sath",
+              "Hmm"
+            ]
+          },
+          {
+            "emoji": "😔",
+            "count": 7,
+            "frequency_pct": 0.09,
+            "sample_contexts": [
+              "Shit.Hamane ek sunhara mauka gava Diya",
+              "Kya jana h ,Abhi to tere se bat kar rah hu ,Kal dubara office Jana hPar ye last hafta h",
+              "Mujhe to pata bhi nahi mere wali crush kaha gayi , kesi h",
+              "ha h to",
+              "ye to jada bura wala tha"
+            ]
+          },
+          {
+            "emoji": "😘",
+            "count": 7,
+            "frequency_pct": 0.09,
+            "sample_contexts": [
+              "I love you too",
+              "Good night darling"
+            ]
+          },
+          {
+            "emoji": "🔥",
+            "count": 7,
+            "frequency_pct": 0.09,
+            "sample_contexts": [
+              "Good girl",
+              "Good girl",
+              "Enjoy",
+              "Enjoy",
+              "Enjoy"
+            ]
+          },
+          {
+            "emoji": "😊",
+            "count": 6,
+            "frequency_pct": 0.07,
+            "sample_contexts": [
+              "Good",
+              "Good",
+              "Hmm",
+              "Good",
+              "Sundar"
+            ]
+          },
+          {
+            "emoji": "😆",
+            "count": 6,
+            "frequency_pct": 0.07,
+            "sample_contexts": [
+              "Ha",
+              "Ha",
+              "karo karo kam karo",
+              "Ha",
+              "Ha,"
+            ]
+          },
+          {
+            "emoji": "🌅",
+            "count": 6,
+            "frequency_pct": 0.07,
+            "sample_contexts": [
+              "Good morning",
+              "Good morning",
+              "Good morning",
+              "Good morning",
+              "Good morning"
+            ]
+          },
+          {
+            "emoji": "😍",
+            "count": 6,
+            "frequency_pct": 0.07,
+            "sample_contexts": [
+              "Cute"
+            ]
+          },
+          {
+            "emoji": "😢",
+            "count": 5,
+            "frequency_pct": 0.06,
+            "sample_contexts": [
+              "Hmm,",
+              "Hmm, itana mushakil hota h",
+              "Bahut dukha h",
+              "gajab man h"
+            ]
+          }
+        ]
+      },
+      "greetings": {
+        "morning_greetings": [
+          {
+            "text": "Good morning 🌄🌄🌄",
+            "count": 59
+          },
+          {
+            "text": "Good morning",
+            "count": 3
+          },
+          {
+            "text": "Good morning 🌄",
+            "count": 2
+          },
+          {
+            "text": "Good morning 🌅🌅🌅",
+            "count": 2
+          },
+          {
+            "text": "Good morning 🌄🌄🌄Phir se message delete sahi h",
+            "count": 1
+          },
+          {
+            "text": "Good morning 😺",
+            "count": 1
+          },
+          {
+            "text": "Good morning 🌄🌄",
+            "count": 1
+          }
+        ],
+        "night_closings": [
+          {
+            "text": "Good night 🌉🌉🌉",
+            "count": 53
+          },
+          {
+            "text": "Good night 🌉🌉",
+            "count": 4
+          },
+          {
+            "text": "Ook good night 🌉🌉🌉",
+            "count": 2
+          },
+          {
+            "text": "Good night 🌉",
+            "count": 1
+          },
+          {
+            "text": "Good night",
+            "count": 1
+          },
+          {
+            "text": "Sorry for the delay2 din se naya project pakada diya hSale chodate hi nahiDeadline bhi isi mahine ki hIsake karanThoda jada hi busy thaPhele khud karte nahi h , phir last me mujhako pakada dete h🥲Me ese hi busy rehane wala adami hu , upar se ye or kar dete h🥵Good night 🌉🌉🌉Agar aap so Gaye h toPar mujhe dought hi h , ray ko phir online aaogiYa at least reel dekhane to .Agar alag kamre me so Rahi ho to, warna mushkil hai",
+            "count": 1
+          },
+          {
+            "text": "Lagta h gusa ho gayi,Good night 🌉🌉🌉",
+            "count": 1
+          },
+          {
+            "text": "Ook if you say so ,Good night 🌉🌉🌉",
+            "count": 1
+          },
+          {
+            "text": "Good night kiss? 😚",
+            "count": 1
+          },
+          {
+            "text": "So gayi, good night 🌉🌉🌉",
+            "count": 1
+          }
+        ]
+      },
+      "short_responses": {
+        "top_short_responses": [
+          {
+            "text": "Hmm",
+            "count": 313
+          },
+          {
+            "text": "Ook",
+            "count": 198
+          },
+          {
+            "text": "🤣",
+            "count": 102
+          },
+          {
+            "text": "Ha",
+            "count": 98
+          },
+          {
+            "text": "😅",
+            "count": 96
+          },
+          {
+            "text": "Good",
+            "count": 80
+          },
+          {
+            "text": "Aacha",
+            "count": 71
+          },
+          {
+            "text": "Good morning 🌄🌄🌄",
+            "count": 59
+          },
+          {
+            "text": "Good night 🌉🌉🌉",
+            "count": 53
+          },
+          {
+            "text": "🤣🤣",
+            "count": 42
+          },
+          {
+            "text": "Nahi",
+            "count": 39
+          },
+          {
+            "text": "Ha ji",
+            "count": 32
+          },
+          {
+            "text": "Oook",
+            "count": 28
+          },
+          {
+            "text": "😂",
+            "count": 28
+          },
+          {
+            "text": "Hmmm",
+            "count": 28
+          },
+          {
+            "text": "Sahi h",
+            "count": 25
+          },
+          {
+            "text": "Kyu?",
+            "count": 25
+          },
+          {
+            "text": "Thanks",
+            "count": 24
+          },
+          {
+            "text": "Ik",
+            "count": 24
+          },
+          {
+            "text": "Koi na",
+            "count": 22
+          },
+          {
+            "text": "Bolo",
+            "count": 20
+          },
+          {
+            "text": "👆",
+            "count": 20
+          },
+          {
+            "text": "?",
+            "count": 18
+          },
+          {
+            "text": "Kya hua?",
+            "count": 18
+          },
+          {
+            "text": "🥲",
+            "count": 17
+          },
+          {
+            "text": "Kya jana h",
+            "count": 16
+          },
+          {
+            "text": "Kya?",
+            "count": 15
+          },
+          {
+            "text": "Kkrh?",
+            "count": 15
+          },
+          {
+            "text": "Call?",
+            "count": 15
+          },
+          {
+            "text": "Aacha ji",
+            "count": 15
+          },
+          {
+            "text": "Hi",
+            "count": 14
+          },
+          {
+            "text": "Yo",
+            "count": 14
+          },
+          {
+            "text": "Mm",
+            "count": 13
+          },
+          {
+            "text": "Tere se bat",
+            "count": 13
+          },
+          {
+            "text": "Good girl",
+            "count": 13
+          },
+          {
+            "text": "🙏",
+            "count": 13
+          },
+          {
+            "text": "Kya jana h?",
+            "count": 12
+          },
+          {
+            "text": "Phir thik h",
+            "count": 12
+          },
+          {
+            "text": "Aacha h",
+            "count": 11
+          },
+          {
+            "text": "😂😂",
+            "count": 10
+          },
+          {
+            "text": "🤔",
+            "count": 10
+          },
+          {
+            "text": "To phir",
+            "count": 10
+          },
+          {
+            "text": "Ooo",
+            "count": 10
+          },
+          {
+            "text": "🫠",
+            "count": 9
+          },
+          {
+            "text": "Truth",
+            "count": 9
+          },
+          {
+            "text": "Welcome",
+            "count": 9
+          },
+          {
+            "text": "Add to favorites",
+            "count": 8
+          },
+          {
+            "text": "Nahi to",
+            "count": 8
+          },
+          {
+            "text": "👆👆",
+            "count": 8
+          },
+          {
+            "text": "Na",
+            "count": 8
+          }
+        ]
+      }
+    }
+  }
+}

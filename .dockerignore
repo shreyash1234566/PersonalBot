@@ -1,0 +1,17 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+data/parsed/
+data/sessions/
+data/examples/
+data/history.sqlite3
+train.txt
+WhatsApp Chat with Class Cr.txt
+conversations.jsonl
+.git/
+.gitignore
+run_pipeline.py
+index_examples.py
+test_system.py
+chat.py

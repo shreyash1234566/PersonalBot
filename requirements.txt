@@ -1,0 +1,19 @@
+# ─── Week 2: LLM + Memory + Context Engine ───
+# Core
+httpx>=0.25.0                  # HTTP client for Groq & Together APIs
+google-genai>=1.0.0            # Google AI Studio SDK (Gemini)
+
+# Memory
+chromadb>=0.6.0                # Vector store for example retrieval
+onnxruntime>=1.17.0            # ChromaDB embeddings runtime (required on Linux)
+pymongo>=4.6.0                 # MongoDB Atlas history backend (Render deploy)
+
+# Utilities
+python-dotenv>=1.0.0           # .env loading (optional, we have manual loader)
+
+# Cloud API + Storage
+fastapi>=0.110.0
+uvicorn>=0.27.0
+google-cloud-firestore>=2.16.0
+google-api-python-client>=2.120.0
+google-auth>=2.29.0
