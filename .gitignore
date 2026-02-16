@@ -4,11 +4,7 @@
 __pycache__/
 *.pyc
 
-# Data (too large for git)
-data/chromadb/
-data/history.sqlite3
-train.txt
-WhatsApp Chat with Class Cr.txt
+
 
 # IDE
 .vscode/
