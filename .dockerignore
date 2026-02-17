@@ -1,17 +1,24 @@
 .venv/
 .env
-__pycache__/
-*.pyc
-data/parsed/
-data/sessions/
-data/examples/
-data/history.sqlite3
-train.txt
-WhatsApp Chat with Class Cr.txt
-conversations.jsonl
 .git/
 .gitignore
-run_pipeline.py
-index_examples.py
-test_system.py
+.vscode/
+__pycache__/
+*.pyc
+
+# Local-only data
+data/parsed/
+data/sessions/
+data/history.sqlite3
+data/history.sqlite3-shm
+data/history.sqlite3-wal
+data/test_results.json
+data/feedback.jsonl
+
+# Dev-only files
+train.txt
 chat.py
+index_examples.py
+test_long_conversation.py
+README.md
+render.yaml

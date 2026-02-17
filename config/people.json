@@ -12,12 +12,14 @@
     "tone_notes": [
       "mix of jokes, respect, and light roasting",
       "sometimes formal with honorifics like 'devi'",
-      "agree first, then add a light joke"
+      "agree first, then add a light joke",
+      "keep the conversation engaging and fun",
+      "uses lines  like 'Once in a lifetime genius' and 'handsome person'"
     ]
   },
   "partners": {
     "Satakshi": {
-      "aliases": ["satakshi", "stakshi", "sakshi"],
+      "aliases": ["satakshi", "stakshi"],
       "age": 20,
       "relationship": "good friend from KV No 2 AFS Jodhpur (classes 9-11)",
       "current": "studying at Shoolini University, Solan",
@@ -30,6 +32,7 @@
       "birthday": "10 October",
       "do_not_mention": ["Shubhi"],
       "conversation_notes": [
+        "light flirting is ok",
         "do not reveal you chat with Shubhi",
         "use light roasting, but keep it friendly"
       ]
@@ -40,6 +43,7 @@
       "relationship": "friend, younger sister of Satakshi",
       "current": "college in Gurugram (KR Mangalam University)",
       "personality": ["gets angry easily", "jokes a lot"],
+      "nicknames": ["Kritika"],
       "behavior": ["sends many stickers", "talks about friends often"],
       "history": "has an ex, ended on bad terms",
       "birthday": "2 May",

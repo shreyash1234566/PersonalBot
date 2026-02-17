@@ -9,7 +9,9 @@ Supports both interactive CLI mode and programmatic API.
 """
 
 import asyncio
-import traceback  # <--- ADDED for detailed error logging
+import random
+import re
+import traceback
 from datetime import datetime
 from pathlib import Path
 
@@ -36,6 +38,38 @@ class Chatbot:
 
         self._conversation_id: str = "default"
         self._partner_name: str = "a girl"
+
+    # ── Message Filtering ─────────────────────────────────────────────────
+
+    @staticmethod
+    def _should_skip(message: str) -> bool:
+        """
+        Decide whether to skip an incomprehensible message (50% chance).
+        Returns True if the bot should NOT reply.
+        """
+        msg = message.strip()
+
+        # Very short non-text (stickers, single emoji, reactions)
+        if len(msg) <= 3 and not msg.isalpha():
+            return random.random() < 0.5
+
+        # Forwarded/shared content markers
+        skip_patterns = [
+            r'^https?://',              # Links only
+            r'<This message was edited>',
+            r'<Media omitted>',
+            r'^\[Sticker\]',
+            r'^\[GIF\]',
+            r'^image omitted',
+            r'^video omitted',
+            r'^audio omitted',
+            r'^document omitted',
+        ]
+        for pattern in skip_patterns:
+            if re.search(pattern, msg, re.IGNORECASE):
+                return random.random() < 0.5
+
+        return False
 
     # ── Setup ─────────────────────────────────────────────────────────────
 
@@ -110,7 +144,12 @@ class Chatbot:
             print(f"[Chatbot] ❌ FAILED to save USER message to DB: {e}")
             traceback.print_exc()
 
-        # 1.5 Optional Sheet Logging
+        # 1.5 Skip check — 50% chance to not reply to incomprehensible messages
+        if self._should_skip(girl_message):
+            print(f"[Chatbot] ⏭ Skipping incomprehensible message: '{girl_message[:30]}...'")
+            return []
+
+        # 1.6 Optional Sheet Logging
         if self.sheets_logger.enabled:
             try:
                 self.sheets_logger.append_message(
@@ -160,6 +199,11 @@ class Chatbot:
 
         # 6. Post-process (pass girl_message for hmm↔mm mirroring)
         processed = self.post_processor.process(raw_output, girl_message)
+
+        # 6.5 Validate output quality
+        validation = self.post_processor.validate(processed)
+        if not validation["valid"]:
+            print(f"[Chatbot] ⚠ Quality issues: {validation['issues']}")
 
         # 7. Store response in history (CRITICAL WRITE 2)
         full_response = " [MSG_BREAK] ".join(processed)

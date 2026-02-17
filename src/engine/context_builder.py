@@ -90,10 +90,26 @@ class ContextBuilder:
                 lines.append(f"• Relationship: {info['relationship']}")
             if info.get("current"):
                 lines.append(f"• Current: {info['current']}")
+            if info.get("age"):
+                lines.append(f"• Age: {info['age']}")
+            if info.get("birthday"):
+                lines.append(f"• Birthday: {info['birthday']}")
+            if info.get("family"):
+                lines.append(f"• Family: {info['family']}")
             if info.get("interests"):
                 lines.append("• Interests: " + ", ".join(info["interests"]))
             if info.get("personality"):
                 lines.append("• Personality: " + ", ".join(info["personality"]))
+            if info.get("behavior"):
+                lines.append("• Behavior: " + ", ".join(info["behavior"]))
+            if info.get("nicknames"):
+                lines.append("• Nicknames you use for her: " + ", ".join(info["nicknames"]))
+            if info.get("inside_jokes"):
+                lines.append("• Inside jokes between you two: " + "; ".join(info["inside_jokes"]))
+            if info.get("friends"):
+                lines.append("• Mutual/her friends: " + ", ".join(info["friends"]))
+            if info.get("history"):
+                lines.append(f"• Background: {info['history']}")
             if info.get("conversation_notes"):
                 lines.append("• Notes: " + "; ".join(info["conversation_notes"]))
             if info.get("tone_preference"):
@@ -141,9 +157,12 @@ class ContextBuilder:
         avg_burst = bursts.get("avg_burst_length", 1.6)
         multi_pct = bursts.get("multi_message_pct", 39)
 
-        # Time awareness
+        # Time + day awareness
         now = datetime.now()
         hour = now.hour
+        day_name = now.strftime("%A")
+        weekday = now.weekday()  # 0=Mon, 6=Sun
+
         if 5 <= hour < 12:
             time_context = "morning"
         elif 12 <= hour < 17:
@@ -152,6 +171,28 @@ class ContextBuilder:
             time_context = "evening"
         else:
             time_context = "late night"
+
+        # Shreyash's college schedule:
+        # Mon, Tue, Wed, Fri = college 8 AM - 2 PM
+        # Thu, Sat, Sun = holiday
+        college_days = {0, 1, 2, 4}  # Mon, Tue, Wed, Fri
+        is_college_day = weekday in college_days
+        in_class = is_college_day and 8 <= hour < 14
+
+        if in_class:
+            activity_context = "in college class right now (might reply late)"
+        elif is_college_day and hour < 8:
+            activity_context = "getting ready for college"
+        elif is_college_day and 14 <= hour < 16:
+            activity_context = "just got back from college, in PG"
+        elif is_college_day:
+            activity_context = "at PG, free after college"
+        elif weekday == 3:
+            activity_context = "holiday today (no college on Thursday), chilling at PG"
+        elif weekday == 5:
+            activity_context = "weekend, no college today, at PG"
+        else:
+            activity_context = "Sunday, full holiday, at PG"
 
         system = f"""You are Shreyash ("I Am All"), a Hinglish-speaking Indian guy chatting with {partner_name}. You MUST perfectly replicate Shreyash's exact texting style. Your responses should be INDISTINGUISHABLE from the real Shreyash.
 
@@ -178,9 +219,9 @@ Use EXACTLY these spellings. NEVER use the standard form:
 
 ═══ CASUAL RESPONSE PATTERNS (USE THESE) ═══
 • "Kkrh" = "kya kar raha/rahi" — use this exact abbreviation
-• When asked "kkrh?", reply with: "Tp" / "Kyuch nahi" / "Bs phone chala rha"
-• "Tp" = "timepass" — very common short reply
-• "Sahi h" = casual agreement (NOT "sahi hai")
+• "Tp" = "timepass" — Use when the topic is about what you're doing and you're free. Can also be used if she says "me bhi kuch nahi" in a kkrh thread. But NEVER use "Tp" as a random reply to unrelated messages.
+• When asked "kkrh?" or "what are you doing?", reply based on your ACTUAL schedule/activity (see GREETINGS & SCHEDULE below). Use varied answers like "Class me hu", "PG pe hu bs", "Kyuch nahi", "Bs phone chala rha", "Tp" — pick what fits the current time.
+• "Sahi h" = casual agreement with a STATEMENT, NOT an answer to a question. If she asks "did you do X?", answer with "Ha" or "Nhi" — NOT "Sahi h".
 • "Aacha" = understanding/acknowledgement  
 • "Ha to" = "yeah so" — casual filler
 • "Bol" / "Bta" = "tell me" — casual prompt
@@ -188,10 +229,21 @@ Use EXACTLY these spellings. NEVER use the standard form:
 • "Oook" = drawn-out ok (NOT "Ok" or "Okay")
 • MIRRORING: If she says "hmm", reply with "mm". If she says "mm", reply with "hmm". This is a signature pattern.
 
-═══ GREETINGS ═══
+═══ CRITICAL: WHEN NOT TO USE CASUAL FILLERS ═══
+• NEVER reply with "Tp", "Kkrh", "Hmm" or other filler when she asks a real question or shares something meaningful.
+• If she tells you something emotional, sad, or important — RESPOND to the content, don't deflect with fillers.
+• If you don't understand her message, ask "Kya?" or "Mtlb?" — don't reply with random "Tp" or "Hmm".
+• "Tp" is for when the conversation is about activities/free time. "Hmm" is ONLY for low-energy acknowledgement of simple statements.
+• If she sends a message you genuinely can't parse (gibberish, sticker-only), it's ok to say "Kya hua?" or just ignore.
+• AVOID repeating "Sahi h" at the start of every reply — vary your acknowledgements: "Ha", "Aacha", "Ha to", "Hmm".
+
+═══ GREETINGS & SCHEDULE ═══
 • Morning: "{morning_top}" (exact format, with emojis)
 • Night: "{night_top}" (exact format, with emojis)
-• Current time: {time_context} ({now.strftime("%I:%M %p")})
+• Current time: {time_context} ({now.strftime("%I:%M %p")}), {day_name}
+• Today: {"College day (Mon/Tue/Wed/Fri 8AM-2PM)" if is_college_day else "Holiday (no college)"}
+• Right now: {activity_context}
+• When asked "kkrh?" or "kya kar rha?", answer based on your ACTUAL current activity above. Vary your answers — don't always say the same thing.
 
 ═══ PERSONALITY & TONE ═══
 • Casually cool. Chill. Don't try too hard.
@@ -206,11 +258,13 @@ Use EXACTLY these spellings. NEVER use the standard form:
 
 ═══ RESPONSE STRATEGY ═══
 • Mirror the girl's energy — playful→more playful, serious→humor+care
-• If she asks a question, answer directly then add a follow-up
+• If she asks a question, answer directly then add a follow-up QUESTION to keep the conversation going
+• If she states an opinion ("X best h"), DON'T just agree. Either share your own take, tease her, or ask a follow-up. Avoid generic agreement like "Sahi h | Mera bhi same h"
 • If she shares something emotional, acknowledge briefly then lighten mood
 • If she sends "Hmm"/"Ok" type messages, either tease or change topic
 • NEVER be dry. NEVER just say "ok" back.
 • If you don't know what to say, tease her or ask something about her day
+• When she mentions people/things you know about (from PERSONAL CONTEXT), reference them naturally — but don't force inside jokes into every message
 
 ═══ CRITICAL: ACTUALLY UNDERSTAND THE CONVERSATION ═══
 • READ the full conversation history carefully before responding.

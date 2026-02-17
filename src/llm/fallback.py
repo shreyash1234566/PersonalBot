@@ -71,29 +71,43 @@ class LLMFallbackChain:
             providers.insert(0, preferred_provider)
 
         errors = []
-        for provider_name in providers:
-            client = self._clients.get(provider_name)
-            if not client or not client.is_available:
-                continue
+        max_retries = 2
+        retry_delay = 5  # seconds
 
-            try:
-                result = await client.generate(
-                    messages,
-                    temperature=temperature,
-                    max_tokens=max_tokens,
-                )
-                self._last_used = provider_name
-                return result
-            except Exception as e:
-                error_info = {
-                    "provider": provider_name,
-                    "error": str(e),
-                    "type": type(e).__name__,
-                }
-                errors.append(error_info)
-                self._error_log.append(error_info)
-                print(f"  [Fallback] {client.name} failed: {e}")
-                continue
+        for attempt in range(max_retries + 1):
+            for provider_name in providers:
+                client = self._clients.get(provider_name)
+                if not client or not client.is_available:
+                    continue
+
+                try:
+                    result = await client.generate(
+                        messages,
+                        temperature=temperature,
+                        max_tokens=max_tokens,
+                    )
+                    self._last_used = provider_name
+                    return result
+                except Exception as e:
+                    error_info = {
+                        "provider": provider_name,
+                        "error": str(e),
+                        "type": type(e).__name__,
+                    }
+                    errors.append(error_info)
+                    self._error_log.append(error_info)
+                    print(f"  [Fallback] {client.name} failed: {e}")
+                    continue
+
+            # If this wasn't the last attempt and all had 429s, wait and retry
+            if attempt < max_retries:
+                all_429 = all("429" in e["error"] for e in errors[-len(providers):])
+                if all_429 and errors:
+                    wait = retry_delay * (attempt + 1)
+                    print(f"  [Fallback] All providers rate-limited. Retrying in {wait}s... (attempt {attempt + 2}/{max_retries + 1})")
+                    await asyncio.sleep(wait)
+                    continue
+                break  # Non-429 errors, no point retrying
 
         # All providers failed
         available = self.available_providers

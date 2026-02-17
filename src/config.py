@@ -44,7 +44,59 @@ _load_dotenv()
 
 # ─── API Keys ─────────────────────────────────────────────────────────────────
 
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+# Load Groq API keys — supports 3 formats (add as many keys as you want!):
+#   1. Comma-separated:  GROQ_API_KEYS=key1,key2,key3,...
+#   2. Numbered:          GROQ_API_KEY_1=..., GROQ_API_KEY_2=..., etc.
+#   3. Single (legacy):   GROQ_API_KEY=...
+def _load_groq_keys():
+    """Load Groq API keys from environment.
+    
+    Priority order (first match wins):
+    1. GROQ_API_KEYS  — comma-separated list of keys (easiest)
+    2. GROQ_API_KEY_1, GROQ_API_KEY_2, ... — numbered keys (unlimited)
+    3. GROQ_API_KEY — single key fallback (backward-compatible)
+    
+    Returns de-duplicated list of non-empty keys.
+    """
+    keys = []
+    
+    # Format 1: Comma-separated GROQ_API_KEYS
+    multi = os.environ.get("GROQ_API_KEYS", "").strip()
+    if multi:
+        keys = [k.strip() for k in multi.split(",") if k.strip()]
+    
+    # Format 2: Numbered keys (GROQ_API_KEY_1, GROQ_API_KEY_2, ...)
+    if not keys:
+        i = 1
+        while True:
+            key = os.environ.get(f"GROQ_API_KEY_{i}", "").strip()
+            if not key:
+                break
+            keys.append(key)
+            i += 1
+    
+    # Format 3: Single GROQ_API_KEY
+    if not keys:
+        single_key = os.environ.get("GROQ_API_KEY", "").strip()
+        if single_key:
+            keys.append(single_key)
+    
+    # De-duplicate while preserving order
+    seen = set()
+    unique = []
+    for k in keys:
+        if k not in seen:
+            seen.add(k)
+            unique.append(k)
+    
+    if unique:
+        print(f"  [Config] Loaded {len(unique)} Groq API key(s) for rotation")
+    
+    return unique
+
+GROQ_API_KEYS = _load_groq_keys()
+GROQ_API_KEY = GROQ_API_KEYS[0] if GROQ_API_KEYS else ""
+
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY", "")
 TOGETHER_API_KEY = os.environ.get("TOGETHER_API_KEY", "")
 

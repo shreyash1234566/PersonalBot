@@ -4,7 +4,15 @@
 __pycache__/
 *.pyc
 
-
-
 # IDE
 .vscode/
+
+# Local data (not needed on server — uses MongoDB)
+data/history.sqlite3
+data/history.sqlite3-shm
+data/history.sqlite3-wal
+data/test_results.json
+data/feedback.jsonl
+
+# Test files
+test_long_conversation.py

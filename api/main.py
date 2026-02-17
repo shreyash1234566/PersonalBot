@@ -17,8 +17,6 @@ from src.config import (
     PEOPLE_FILE,
 )
 
-app = FastAPI(title="Shreyash WhatsApp Twin")
-
 
 def _load_people() -> dict:
     try:
@@ -99,6 +97,9 @@ def _build_bot() -> Chatbot:
 BOT = _build_bot()
 
 
+app = FastAPI(title="Shreyash WhatsApp Twin")
+
+
 @app.get("/")
 async def health():
     """Health check for Cloud Run."""
@@ -140,3 +141,60 @@ async def webhook(request: Request):
         return {"replies": [{"message": "Hmm"}]}
 
     return {"replies": [{"message": msg} for msg in responses]}
+
+
+# ── Feedback (Rate Responses) ────────────────────────────────────────────
+
+@app.post("/rate")
+async def rate_response(request: Request):
+    """
+    Rate a bot response as good/bad for future improvement.
+    Logs to a JSONL file for later analysis.
+
+    Payload: {"conversation_id": "...", "rating": "good"|"bad",
+             "message": "...", "response": "...", "note": "..."}
+    """
+    from datetime import datetime
+    from pathlib import Path
+
+    payload = await request.json()
+    rating = payload.get("rating", "")
+    if rating not in ("good", "bad"):
+        raise HTTPException(status_code=400, detail="rating must be 'good' or 'bad'")
+
+    entry = {
+        "timestamp": datetime.utcnow().isoformat(),
+        "conversation_id": payload.get("conversation_id", ""),
+        "rating": rating,
+        "message": payload.get("message", ""),
+        "response": payload.get("response", ""),
+        "note": payload.get("note", ""),
+    }
+
+    feedback_file = Path("data/feedback.jsonl")
+    feedback_file.parent.mkdir(parents=True, exist_ok=True)
+    with open(feedback_file, "a", encoding="utf-8") as f:
+        f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+
+    return {"saved": True, "rating": rating}
+
+
+# ── Monitoring (Key Rotation Stats) ──────────────────────────────────────
+
+@app.get("/stats")
+async def stats():
+    """
+    Return Groq key rotation stats + overall bot health.
+    Use this to monitor rate-limit behaviour in production.
+    """
+    groq_stats = {}
+    if hasattr(BOT, "llm") and hasattr(BOT.llm, "_clients"):
+        groq = BOT.llm._clients.get("groq")
+        if groq and hasattr(groq, "get_stats"):
+            groq_stats = groq.get_stats()
+
+    return {
+        "status": "ok",
+        "history_backend": HISTORY_BACKEND,
+        "groq": groq_stats,
+    }
